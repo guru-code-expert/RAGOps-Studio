@@ -1,0 +1,468 @@
+<!-- --- index.html --- -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAGOps Studio - Enterprise RAG Pipeline Platform</title>
+    <meta name="description" content="Build, evaluate, and monitor production-ready RAG pipelines with confidence.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar" class="glass-nav">
+        <div class="nav-container">
+            <a href="#" class="logo">RAGOps<span class="accent">Studio</span></a>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#demo">Demo</a>
+                <a href="#usecases">Use Cases</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#faq">FAQ</a>
+            </div>
+            <button class="btn-primary" id="demoBtn">Get Demo</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-headline">Ship Production RAG with Confidence</h1>
+                <p class="hero-subheadline">The complete platform for building, evaluating, and monitoring RAG pipelines. Dataset management, retrieval evaluation, and hallucination checks in one unified workflow.</p>
+                <div class="cta-group">
+                    <button class="btn-primary btn-large" id="heroDemoBtn">Request a Demo</button>
+                    <button class="btn-secondary btn-large" onclick="window.location.href='#features'">View Docs</button>
+                </div>
+            </div>
+            <div class="hero-mock-ui">
+                <div class="mock-header">RAG Run Report - 2024-01-15</div>
+                <div class="mock-content">
+                    <div class="mock-metric">
+                        <span>Retrieval Score</span>
+                        <span class="metric-value">94.2%</span>
+                    </div>
+                    <div class="mock-metric">
+                        <span>Faithfulness</span>
+                        <span class="metric-value">89.7%</span>
+                    </div>
+                    <div class="mock-metric">
+                        <span>Answer Relevance</span>
+                        <span class="metric-value">92.1%</span>
+                    </div>
+                    <div class="mock-alert">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="12" y1="8" x2="12" y2="12"></line>
+                            <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                        </svg>
+                        <span>Low faithfulness detected in 2/50 responses</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof & Metrics -->
+    <section id="social-proof" class="social-proof">
+        <div class="container">
+            <div class="logos-row">
+                <div class="logo-placeholder">TECHCORP</div>
+                <div class="logo-placeholder">AI SOLUTIONS</div>
+                <div class="logo-placeholder">DATAWORKS</div>
+                <div class="logo-placeholder">CLOUDOPS</div>
+            </div>
+            <div class="metrics-row">
+                <div class="metric-card">
+                    <div class="metric-number">10x</div>
+                    <div class="metric-label">Faster Debugging</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-number">99.2%</div>
+                    <div class="metric-label">Uptime Monitoring</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-number">500+</div>
+                    <div class="metric-label">Pipeline Runs/Day</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features-section">
+        <div class="container">
+            <h2>Complete RAG Lifecycle Management</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                        </svg>
+                    </div>
+                    <h3>Dataset Management</h3>
+                    <p>Version control for your documents and embeddings with automated quality checks.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                    </div>
+                    <h3>Retrieval Evaluation</h3>
+                    <p>Measure context relevance and retrieval accuracy with built-in metrics.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2v4m0 12v4M4.93 4.93l2.83 2.83m8.48 8.48l2.83 2.83M2 12h4m12 0h4M4.93 19.07l2.83-2.83m8.48-8.48l2.83-2.83"></path>
+                        </svg>
+                    </div>
+                    <h3>Hallucination Detection</h3>
+                    <p>Automated fact-checking against source documents to catch false information.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 11l3 3L22 4"></path>
+                            <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"></path>
+                        </svg>
+                    </div>
+                    <h3>Prompt Versioning</h3>
+                    <p>Track prompt changes with A/B testing and performance comparisons.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="9" y1="9" x2="15" y2="15"></line>
+                            <line x1="15" y1="9" x2="9" y2="15"></line>
+                        </svg>
+                    </div>
+                    <h3>Model Monitoring</h3>
+                    <p>Real-time dashboards for latency, cost, and quality metrics across environments.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+                        </svg>
+                    </div>
+                    <h3>Automated Testing</h3>
+                    <p>Continuous evaluation pipelines that catch regressions before production.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Demo Section -->
+    <section id="demo" class="demo-section">
+        <div class="container">
+            <h2>RAG Quality Simulator</h2>
+            <p class="section-subtitle">Test how different configurations affect your RAG pipeline performance</p>
+
+            <div class="demo-grid">
+                <div class="demo-controls">
+                    <div class="control-group">
+                        <label for="embedding-model">Embedding Model</label>
+                        <select id="embedding-model">
+                            <option value="openai">text-embedding-ada-002</option>
+                            <option value="cohere">embed-multilingual-v3</option>
+                            <option value="local">all-MiniLM-L6-v2</option>
+                        </select>
+                    </div>
+                    <div class="control-group">
+                        <label for="chunk-size">Chunk Size: <span id="chunk-value">512</span></label>
+                        <input type="range" id="chunk-size" min="128" max="2048" value="512" step="128">
+                    </div>
+                    <div class="control-group">
+                        <label for="retriever">Retriever</label>
+                        <select id="retriever">
+                            <option value="vector">Vector Search</option>
+                            <option value="hybrid">Hybrid Search</option>
+                            <option value="bm25">BM25</option>
+                        </select>
+                    </div>
+                    <button class="btn-primary" id="simulate-btn">Simulate Run</button>
+                </div>
+
+                <div class="demo-results">
+                    <div class="results-chart">
+                        <div class="chart-bar">
+                            <div class="bar-label">Retrieval Score</div>
+                            <div class="bar-track">
+                                <div class="bar-fill" id="bar-retrieval" style="width: 0%"></div>
+                                <span class="bar-value" id="value-retrieval">0%</span>
+                            </div>
+                        </div>
+                        <div class="chart-bar">
+                            <div class="bar-label">Faithfulness</div>
+                            <div class="bar-track">
+                                <div class="bar-fill" id="bar-faithfulness" style="width: 0%"></div>
+                                <span class="bar-value" id="value-faithfulness">0%</span>
+                            </div>
+                        </div>
+                        <div class="chart-bar">
+                            <div class="bar-label">Latency</div>
+                            <div class="bar-track">
+                                <div class="bar-fill" id="bar-latency" style="width: 0%"></div>
+                                <span class="bar-value" id="value-latency">0ms</span>
+                            </div>
+                        </div>
+                        <div class="chart-bar">
+                            <div class="bar-label">Cost</div>
+                            <div class="bar-track">
+                                <div class="bar-fill" id="bar-cost" style="width: 0%"></div>
+                                <span class="bar-value" id="value-cost">$0.00</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="generated-answer">
+                        <h4>Generated Answer Preview</h4>
+                        <p id="answer-text">Configure settings and run simulation to see results...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases Section -->
+    <section id="usecases" class="usecases-section">
+        <div class="container">
+            <h2>Platform Use Cases</h2>
+            <div class="tabs-container">
+                <div class="tab-buttons">
+                    <button class="tab-btn active" data-tab="enterprise">Enterprise Search</button>
+                    <button class="tab-btn" data-tab="support">Customer Support</button>
+                    <button class="tab-btn" data-tab="research">Research & Analysis</button>
+                </div>
+                <div class="tab-content active" id="enterprise">
+                    <h3>Internal Knowledge Base</h3>
+                    <p>Transform your company documents into a searchable knowledge base with RAGOps Studio. Our platform ensures every response is grounded in your latest documentation with full audit trails.</p>
+                    <ul>
+                        <li>Multi-document retrieval with relevance scoring</li>
+                        <li>Department-specific access controls</li>
+                        <li>Real-time document updates</li>
+                    </ul>
+                </div>
+                <div class="tab-content" id="support">
+                    <h3>AI-Powered Support Agent</h3>
+                    <p>Build reliable support agents that reference your product documentation and past tickets. Monitor hallucinations and maintain response quality across thousands of daily interactions.</p>
+                    <ul>
+                        <li>Ticket history integration</li>
+                        <li>Escalation trigger detection</li>
+                        <li>Customer satisfaction tracking</li>
+                    </ul>
+                </div>
+                <div class="tab-content" id="research">
+                    <h3>Academic & Technical Research</h3>
+                    <p>Conduct literature reviews and technical analysis with confidence. Our evaluation tools help verify information against source materials and track citation accuracy.</p>
+                    <ul>
+                        <li>Multi-paper synthesis</li>
+                        <li>Citation verification</li>
+                        <li>Methodology comparison</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing-section">
+        <div class="container">
+            <h2>Simple, Transparent Pricing</h2>
+            <div class="pricing-toggle">
+                <span id="monthly-label" class="toggle-active">Monthly</span>
+                <div class="toggle-switch" id="pricing-toggle">
+                    <div class="toggle-slider"></div>
+                </div>
+                <span id="annual-label">Annual (Save 20%)</span>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Starter</h3>
+                    <div class="price" data-monthly="0" data-annual="0">$0<span>/mo</span></div>
+                    <ul class="features-list">
+                        <li>1,000 queries/month</li>
+                        <li>3 team members</li>
+                        <li>Basic evaluation metrics</li>
+                        <li>7-day data retention</li>
+                    </ul>
+                    <button class="btn-secondary" onclick="openDemoModal()">Start Free</button>
+                </div>
+                <div class="pricing-card featured">
+                    <h3>Pro</h3>
+                    <div class="price" data-monthly="299" data-annual="239">$299<span>/mo</span></div>
+                    <ul class="features-list">
+                        <li>50,000 queries/month</li>
+                        <li>Unlimited team members</li>
+                        <li>Advanced analytics & monitoring</li>
+                        <li>90-day data retention</li>
+                        <li>Priority support</li>
+                    </ul>
+                    <button class="btn-primary" onclick="openDemoModal()">Get Pro</button>
+                </div>
+                <div class="pricing-card">
+                    <h3>Enterprise</h3>
+                    <div class="price">Custom</div>
+                    <ul class="features-list">
+                        <li>Unlimited queries</li>
+                        <li>SSO & advanced security</li>
+                        <li>Custom integrations</li>
+                        <li>On-premise deployment</li>
+                        <li>Dedicated support</li>
+                    </ul>
+                    <button class="btn-secondary" onclick="openDemoModal()">Contact Sales</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq-section">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How does RAGOps Studio detect hallucinations?</span>
+                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </div>
+                    <div class="faq-answer">
+                        Our system compares generated answers against source documents using multiple verification methods including claim decomposition, entailment checking, and source attribution scoring.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Can I deploy on-premise?</span>
+                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </div>
+                    <div class="faq-answer">
+                        Yes, Enterprise plans include on-premise deployment options with full air-gap support for sensitive environments.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What embedding models do you support?</span>
+                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </div>
+                    <div class="faq-answer">
+                        We support OpenAI, Cohere, and HuggingFace models out-of-the-box. Custom embeddings can be integrated via our Python SDK.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How is my data secured?</span>
+                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </div>
+                    <div class="faq-answer">
+                        All data is encrypted in transit and at rest. We're SOC 2 Type II compliant and offer data residency controls for Enterprise customers.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section id="cta" class="cta-section">
+        <div class="container">
+            <h2>Ready to Build Reliable RAG Pipelines?</h2>
+            <p>Join engineering teams at leading companies who trust RAGOps Studio for production deployments.</p>
+            <div class="cta-buttons">
+                <button class="btn-primary btn-large" onclick="openDemoModal()">Start Free Trial</button>
+                <button class="btn-secondary btn-large" onclick="window.location.href='#features'">Explore Features</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">RAGOps<span class="accent">Studio</span></div>
+                    <p>Enterprise RAG pipeline platform</p>
+                    <div class="newsletter">
+                        <h4>Stay Updated</h4>
+                        <form id="newsletter-form">
+                            <input type="email" id="newsletter-email" placeholder="your@email.com" required>
+                            <button type="submit" class="btn-primary">Subscribe</button>
+                        </form>
+                        <div id="newsletter-message" class="form-message"></div>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Product</h4>
+                    <a href="#features">Features</a>
+                    <a href="#pricing">Pricing</a>
+                    <a href="#demo">Demo</a>
+                    <!-- <a href="#">Changelog</a> -->
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <a href="#">About</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Careers</a>
+                    <a href="#">Contact</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <a href="#">Privacy</a>
+                    <a href="#">Terms</a>
+                    <a href="#">Security</a>
+                    <a href="#">Compliance</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 RAGOps Studio. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div id="demo-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Request a Demo</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <form id="demo-form">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Work Email</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="company">Company</label>
+                    <input type="text" id="company" required>
+                </div>
+                <div class="form-group">
+                    <label for="usecase">Primary Use Case</label>
+                    <select id="usecase">
+                        <option value="enterprise">Enterprise Search</option>
+                        <option value="support">Customer Support</option>
+                        <option value="research">Research & Analysis</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-primary">Submit Request</button>
+                <div id="form-message" class="form-message"></div>
+            </form>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
